@@ -12,3 +12,9 @@ def client():
 
 def sleep_ms(ms: int):
     time.sleep(ms / 1000.0)
+
+def reset_state():
+    """Force timer to a stopped/cleared state for test isolation."""
+    c = client()
+    c.post("/timer/stop")
+    c.post("/timer/reset")

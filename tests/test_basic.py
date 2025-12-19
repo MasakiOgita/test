@@ -12,3 +12,6 @@ def test_index_should_load_html():
     c = client()
     res = c.get("/")
     assert res.status_code == 200
+    body = res.get_data(as_text=True)
+    assert "<title>Timer / Clock App</title>" in body
+    assert "Commit:" in body
