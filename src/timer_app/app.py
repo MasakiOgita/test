@@ -9,3 +9,4 @@ except ModuleNotFoundError:  # `python app.py` を src/timer_app で実行
 
 if __name__ == "__main__":
     main()
+#test
